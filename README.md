@@ -6,8 +6,6 @@
 [![Discord](https://img.shields.io/badge/-Discord-5865F2?style=flat&logo=Discord&logoColor=white)](https://discord.gg/ZwcVwxv5rq)
 
 
-
-
 ## Project Structure
 
 ```
@@ -49,6 +47,8 @@ unitree_isaac/
 ```
 
 ## Installation
+
+We test on Ubuntu 22.04
 
 - Install Isaac Lab by following the [installation guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html).
 - Clone or copy this repository separately from the Isaac Lab installation (i.e. outside the `IsaacLab` directory):
