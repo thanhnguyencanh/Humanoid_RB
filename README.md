@@ -91,7 +91,7 @@ cd DSC-Humanoid
 
 ### 3. Demo 
 #### Patrol
-In this scenario, a humanoid-robot security will automatically patrol around the environment. When humanoid approached the sub goal, it will stop and look around.
+In this scenario, a humanoid-robot security will automatically patrol around the environment. When the humanoid approaches the sub goal, it will stop and look around.
 ```bash
 cd DSC-Humanoid
 python scripts/patrol_scene.py --task Unitree-G1-29dof-Velocity --enable_cameras
