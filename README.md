@@ -10,39 +10,39 @@
 
 ```
 unitree_isaac/
-├── scripts/                    # Main execution scripts
-│   ├── scene_1.py             # Full demo scene 1
-│   ├── raising_hand.py        # Manual joint control 
-│   ├── rsl_rl/                # Training & inference scripts
-│   │   ├── train.py           # Train RL policy
-│   │   ├── play.py            # Run trained policy
-│   │   └── cli_args.py        # Command line arguments
-│   ├── path_planning_algo/    # Navigation algorithms
-│   │   ├── main_algo.py       # UnitreeNavigationSystem
+├── scripts/                                      # Main execution scripts
+│   ├── scene_1.py                                # Full demo scene 1
+│   ├── raising_hand.py                           # Manual joint control 
+│   ├── rsl_rl/                                   # Training & inference scripts
+│   │   ├── train.py                              # Train RL policy
+│   │   ├── play.py                               # Run trained policy
+│   │   └── cli_args.py                           # Command line arguments
+│   ├── path_planning_algo/                       # Navigation algorithms
+│   │   ├── main_algo.py                          # UnitreeNavigationSystem
 │   │   └── core/
-│   │       ├── a_star.py      # A* global planner
-│   │       ├── mppi.py        # MPPI local controller
-│   │       └── map.yaml       # Occupancy grid map
-│   └── reasoning/             # AI reasoning module
-│       ├── think.py           # REASONING class (Gemini API)
-│       ├── models/            # YOLO, OSNet, Face detection
-│       └── utils/             # Helper functions
-├── scene_env/                 # Environment configurations
-│   ├── scene_1_cfg.py         # WarehouseSceneCfg class
-│   └── env_usd/               # USD assets
-│       ├── env_scene_1/       # Warehouse environment
-│       └── human/             # Human models (workers, intruders)
-├── source/                    # Source packages
-│   └── unitree_rl_lab/        # Main RL lab package
+│   │       ├── a_star.py                         # A* global planner
+│   │       ├── mppi.py                           # MPPI local controller
+│   │       └── map.yaml                          # Occupancy grid map
+│   └── reasoning/                                # AI reasoning module
+│       ├── think.py                              # REASONING class (Gemini API)
+│       ├── models/                               # YOLO, OSNet, Face detection
+│       └── utils/                                # Helper functions
+├── scene_env/                                    # Environment configurations
+│   ├── scene_1_cfg.py                            # WarehouseSceneCfg class
+│   └── env_usd/                                  # USD assets
+│       ├── env_scene_1/                          # Warehouse environment
+│       └── human/                                # Human models (workers, intruders)
+├── source/                                       # Source packages
+│   └── unitree_rl_lab/                           # Main RL lab package
 │       └── unitree_rl_lab/
-│           ├── assets/        # Robot configurations
-│           └── tasks/         # RL task definitions
+│           ├── assets/                           # Robot configurations
+│           └── tasks/                            # RL task definitions
 │               └── locomotion/robots/g1/29dof/
-│                   └── velocity_env_cfg.py  # Training config
-├── logs/                      # Training logs & checkpoints
+│                   └── velocity_env_cfg.py       # Training config
+├── logs/                                         # Training logs & checkpoints
 │   └── rsl_rl/unitree_g1_29dof_velocity/
-│       └── model_9200.pt      # Trained policy checkpoint
-└── unitree_model/             # Robot URDF/USD models
+│       └── model_9200.pt                         # Trained policy checkpoint
+└── unitree_model/                                # Robot URDF/USD models
     └── G1/29dof/
 ```
 
