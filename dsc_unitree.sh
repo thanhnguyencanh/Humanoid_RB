@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export UNITREE_RL_LAB_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+export DSC_UNITREE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 if ! [[ -z "${CONDA_PREFIX}" ]]; then
     python_exe=${CONDA_PREFIX}/bin/python
@@ -24,15 +24,15 @@ _ut_rl_lab_python_argcomplete_wrapper() {
                     COMP_TYPE="$COMP_TYPE" \
                     _ARGCOMPLETE=1 \
                     _ARGCOMPLETE_SUPPRESS_SPACE=$SUPPRESS_SPACE \
-                    ${python_exe} ${UNITREE_RL_LAB_PATH}/scripts/rsl_rl/train.py 8>&1 9>&2 1>/dev/null 2>/dev/null) )
+                    ${python_exe} ${DSC_UNITREE}/scripts/rsl_rl/train.py 8>&1 9>&2 1>/dev/null 2>/dev/null) )
 }
-complete -o nospace -F _ut_rl_lab_python_argcomplete_wrapper "./unitree_rl_lab.sh"
+complete -o nospace -F _ut_rl_lab_python_argcomplete_wrapper "./dsc_unitree.sh"
 
 
 _ut_setup_conda_env() {
 
     # copied from isaaclab/_isaac_sim/setup_conda_env.sh
-    # add source unitree_rl_lab.sh to conda activate.d
+    # add source dsc_unitree.sh to conda activate.d
     printf '%s\n' '#!/usr/bin/env bash' '' \
         '# for Isaac Lab' \
         'export ISAACLAB_PATH='${ISAACLAB_PATH}'' \
@@ -41,8 +41,8 @@ _ut_setup_conda_env() {
         '# show icon if not running headless' \
         'export RESOURCE_NAME="IsaacSim"' \
         '' \
-        '# for unitree_rl_lab' \
-        'source '${UNITREE_RL_LAB_PATH}'/unitree_rl_lab.sh' \
+        '# for dsc_unitree' \
+        'source '${DSC_UNITREE}'/dsc_unitree.sh' \
         '' > ${CONDA_PREFIX}/etc/conda/activate.d/setenv.sh
 
     # check if we have _isaac_sim directory -> if so that means binaries were installed.
@@ -62,21 +62,21 @@ _ut_setup_conda_env() {
 case "$1" in
     -i|--install)
         git lfs install # ensure git lfs is installed
-        pip install -e ${UNITREE_RL_LAB_PATH}/source/unitree_rl_lab/
+        pip install -e ${DSC_UNITREE}/source/unitree_rl_lab/
         _ut_setup_conda_env
         activate-global-python-argcomplete
         ;;
     -l|--list)
         shift
-        ${python_exe} ${UNITREE_RL_LAB_PATH}/scripts/list_envs.py "$@"
+        ${python_exe} ${DSC_UNITREE}/scripts/list_envs.py "$@"
         ;;
     -p|--play)
         shift
-        ${python_exe} ${UNITREE_RL_LAB_PATH}/scripts/rsl_rl/play.py "$@"
+        ${python_exe} ${DSC_UNITREE}/scripts/rsl_rl/play.py "$@"
         ;;
     -t|--train)
         shift
-        ${python_exe} ${UNITREE_RL_LAB_PATH}/scripts/rsl_rl/train.py --headless "$@"
+        ${python_exe} ${DSC_UNITREE}/scripts/rsl_rl/train.py --headless "$@"
         ;;
     *) # unknown option
         ;;
