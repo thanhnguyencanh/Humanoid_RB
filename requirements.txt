@@ -331,7 +331,6 @@ typing_extensions==4.12.2
 tzdata==2025.2
 ultralytics==8.3.241
 ultralytics-thop==2.0.18
--e git+https://github.com/thinhhd-cyber/unitree_isaac.git@6f139a910d40f834d04fa277491d3fe7b7b42bdd#egg=unitree_rl_lab&subdirectory=source/unitree_rl_lab
 uritemplate==4.2.0
 urllib3==2.4.0
 uvicorn==0.29.0
@@ -349,4 +348,3 @@ wrapt==1.16.0
 yacs==0.1.8
 yarl==1.18.3
 zc.lockfile==4.0
-zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1749421620841/work
