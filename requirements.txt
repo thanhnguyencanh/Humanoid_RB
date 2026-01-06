@@ -114,7 +114,7 @@ idna==3.10
 idna-ssl==1.1.0
 imageio==2.34.1
 imageio-ffmpeg==0.4.5
-importlib_metadata @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_importlib-metadata_1747934053/work
+importlib_metadata
 iniconfig==2.1.0
 insightface==0.7.3
 iopath==0.1.10
