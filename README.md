@@ -54,13 +54,13 @@ We test on Ubuntu 22.04
 - Clone or copy this repository separately from the Isaac Lab installation (i.e. outside the `IsaacLab` directory):
 
     ```bash
-    git clone https://github.com/dsc-labs/DSC-Humanoid
+    git clone https://github.com/dsc-labs/Humanoid_RB
     ```
 - Use a python interpreter that has Isaac Lab installed, install the library in editable mode using:
 
     ```bash
-    cd DSC-Humanoid
-    conda create -n myenv python=3.11
+    cd Humanoid_RB
+    conda create -n dsc-humanoid python=3.11
     conda activate dsc-humanoid
     pip install -r requirements.txt
     ./dsc_unitree.sh -i
